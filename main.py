@@ -8,6 +8,7 @@ def weight_converter():
     elif input_str.endswith('pd'):
         pd = float(input_str[:-2])
         kg = pd / 2.2046
+        kg = round(kg + 1e-10,3)
         print(f"对应的公制重量为{kg:.3f}公斤")
     else:
         print("输入格式错误，请以kg或pd结尾")
